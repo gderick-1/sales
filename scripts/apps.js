@@ -2,7 +2,7 @@
 * created by godson derick
 * date: 3rd october
 * */
- angular.module('sampleProject', ['ngRoute'])
+ angular.module('Sales', ['ngRoute'])
 .config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.when('/content',{
         templateUrl: 'views/partials/home.html'/*,
