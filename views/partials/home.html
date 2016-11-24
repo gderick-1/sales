@@ -1,12 +1,9 @@
 <div class="home">
-    <div ng-controller="navigationController">
-        <nav ng-model="nav as navigation">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+    <div>
+        <nav ng-controller="navigationController">
+            <li ng-model="navigation" ng-repeat="nav as navigation">
+                <ol><a href="{{nav.link}}">{{nav.name}}</a></ol>
+            </li>
         </nav>
     </div>
 </div>

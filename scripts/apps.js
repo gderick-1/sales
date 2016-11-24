@@ -4,10 +4,17 @@
 * */
  angular.module('Sales', ['ngRoute'])
 .config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
-    $routeProvider.when('/login', {
+    $routeProvider.when('/', {
         templateUrl: 'views/partials/login.html',
         controller: LoginController
-    }).when('/content',{
+    }).when('/home',{
+        resolve: {
+            "check": function ($location, $rootScope) {
+                if (!$rootScope.loggedIn){
+                    
+                }
+            }
+        },
         templateUrl: 'views/partials/home.html'/*,
         controller: MainController*/
     }).when('/portfolio', {
@@ -17,7 +24,7 @@
     }).when('/about',{
         templateUrl: 'views/partials/about.html'
     }).otherwise({
-        redirectTo: '/login'
+        redirectTo: '/'
     });
 
     $locationProvider.html5Mode(true);

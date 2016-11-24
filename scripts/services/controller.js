@@ -5,4 +5,4 @@
  */
     'use strict'
 
-var sampleProject = angular.module('sampleProject', ['navigationController', 'mainController'])
+var sales = angular.module('sales', ['navigationController', 'mainController','loginController']);
