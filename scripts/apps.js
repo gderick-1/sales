@@ -4,7 +4,10 @@
 * */
  angular.module('Sales', ['ngRoute'])
 .config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
-    $routeProvider.when('/content',{
+    $routeProvider.when('/login', {
+        templateUrl: 'views/partials/login.html',
+        controller: LoginController
+    }).when('/content',{
         templateUrl: 'views/partials/home.html'/*,
         controller: MainController*/
     }).when('/portfolio', {
@@ -14,7 +17,7 @@
     }).when('/about',{
         templateUrl: 'views/partials/about.html'
     }).otherwise({
-        templateUrl: '/'
+        redirectTo: '/login'
     });
 
     $locationProvider.html5Mode(true);
