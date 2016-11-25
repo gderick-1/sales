@@ -6,26 +6,29 @@
 .config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
         templateUrl: 'views/partials/login.html',
-        controller: LoginController
-    }).when('/home',{
-        resolve: {
+        controller: loginController
+    }).when('home',{
+        /*resolve: {
             "check": function ($location, $rootScope) {
                 if (!$rootScope.loggedIn){
                     
                 }
             }
-        },
+        },*/
         templateUrl: 'views/partials/home.html'/*,
         controller: MainController*/
-    }).when('/portfolio', {
+    }).when('portfolio', {
         templateUrl: 'views/partials/portfolio.html'
-    }).when('/contact',{
+    }).when('contact',{
         templateUrl: 'views/partials/contact.html'
-    }).when('/about',{
+    }).when('about',{
         templateUrl: 'views/partials/about.html'
     }).otherwise({
         redirectTo: '/'
     });
 
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode({
+        enable: true,
+        requireBase: false
+    });
 }]);

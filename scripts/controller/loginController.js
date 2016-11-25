@@ -7,8 +7,8 @@ loginController.controller('LoginController', ['$scope','$location', '$rootScope
     $rootScope.password = $scope.password;
 
     if($rootScope.username == 'derick_1' && $rootScope.password == '12345') {
-        console.log('logged in');
         $rootScope.login = true;
-        $location.path('/home');
+        console.log('logged in');
+        $location.path('home');
     }
 }]);
