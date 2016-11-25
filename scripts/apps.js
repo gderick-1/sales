@@ -2,7 +2,7 @@
 * created by godson derick
 * date: 3rd october
 * */
- angular.module('Sales', ['ngRoute'])
+ angular.module('Sales', ['ngRoute', 'salesControllers'])
 .config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
         templateUrl: 'views/partials/login.html',
