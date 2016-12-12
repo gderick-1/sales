@@ -6,7 +6,7 @@
 .config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
         templateUrl: 'views/partials/home.html',
-        controller: loginController
+        controller: mainController
     }).when('home',{
         /*resolve: {
             "check": function ($location, $rootScope) {
