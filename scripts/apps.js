@@ -5,7 +5,7 @@
  angular.module('Sales', ['ngRoute', 'salesControllers'])
 .config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
-        templateUrl: 'views/partials/login.html',
+        templateUrl: 'views/partials/home.html',
         controller: loginController
     }).when('home',{
         /*resolve: {
@@ -15,7 +15,7 @@
                 }
             }
         },*/
-        templateUrl: 'views/partials/home.html'/*,
+        templateUrl: 'views/partials/login.html'/*,
         controller: MainController*/
     }).when('portfolio', {
         templateUrl: 'views/partials/portfolio.html'
