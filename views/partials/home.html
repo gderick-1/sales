@@ -1,9 +1,30 @@
 <div class="home">
     <div>
-        <nav ng-controller="navigationController">
+        <nav ng-controller="NavigationController">
             <li ng-model="navigation" ng-repeat="navi as navigation">
-                <ol><a href="{{navi.link}}">{{nav.name}}</a></ol>
+                <ul><a href="{{navi.link}}">{{navi.name}}</a></ul>
             </li>
         </nav>
     </div>
+
+    <div ng-controller="MainController" ng-model="user">
+        <table>
+            <tbody>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Education</th>
+                <th>Birth</th>
+            </tr>
+
+            <tr ng-repeat="user in user">
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.education}}</td>
+                <td>{{user.birth}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
+
